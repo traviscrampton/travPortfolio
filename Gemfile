@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails'
 gem 'pg'
+gem 'sqlite3'
 gem 'uglifier'
 gem 'coffee-rails'
 gem 'jquery-rails'
