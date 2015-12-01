@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151201194953) do
+ActiveRecord::Schema.define(version: 20151201223251) do
+
+  create_table "blogs", force: :cascade do |t|
+    t.string "title"
+    t.string "date"
+    t.string "distance"
+    t.string "time"
+    t.string "travelimage"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
