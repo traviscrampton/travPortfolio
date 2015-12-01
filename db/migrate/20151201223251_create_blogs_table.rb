@@ -5,7 +5,7 @@ class CreateBlogsTable < ActiveRecord::Migration
       t.column :date, :string
       t.column :distance, :string
       t.column :time, :string
-      t.column :travelimage, :string
+      t.attachment :mapimage
     end
   end
 end

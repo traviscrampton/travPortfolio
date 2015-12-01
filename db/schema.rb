@@ -14,11 +14,14 @@
 ActiveRecord::Schema.define(version: 20151201223251) do
 
   create_table "blogs", force: :cascade do |t|
-    t.string "title"
-    t.string "date"
-    t.string "distance"
-    t.string "time"
-    t.string "travelimage"
+    t.string   "title"
+    t.string   "date"
+    t.string   "distance"
+    t.string   "time"
+    t.string   "mapimage_file_name"
+    t.string   "mapimage_content_type"
+    t.integer  "mapimage_file_size"
+    t.datetime "mapimage_updated_at"
   end
 
   create_table "users", force: :cascade do |t|
