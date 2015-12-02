@@ -20,3 +20,33 @@ html {
 a{
   color: white;
 }
+
+.goRight h5{
+    float: right;
+}
+
+.zealandBanner{
+  height:35rem;
+  overflow: hidden;
+  width: 100%;
+  background: url('newZealandCover') no-repeat center;
+  background-size: cover;
+  color: white;
+  margin-right: 20%;
+}
+.olzealand{
+  height: 240px;
+    h1{
+      position: absolute;
+      bottom: 0%;
+      text-shadow: 1.3px 1.3px #000;
+  }
+}
+.efficient{
+  height: 240px;
+    p{
+      position: absolute;
+      margin-right: 10%;
+        text-shadow: 1px 1px #000;
+    }
+}

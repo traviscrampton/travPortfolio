@@ -10,9 +10,7 @@
 <body>
   <% if current_page? (root_path)%>
     <%= render 'layouts/homenav' %>
-  <% else %>
-    <%= render 'layouts/othernav' %>
-  <% end %>    
+  <% end %>
 
 <%= yield %>
 
