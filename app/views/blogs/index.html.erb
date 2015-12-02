@@ -18,14 +18,18 @@
 </div>
 <div class="container topspace jumbotron">
   <% @blogs.each do |blog| %>
-    <div class="col-md-3">
-      <%= image_tag blog.mapimage.url(:medium), class: "mapimage"%>
+
+    <div class="col-md-12 title">
+        <h3><%= blog.title %></h3>
+        <legend><p> <%= blog.date %> </p></legend>
     </div>
-    <div class="col-md-8 leftspace">
-      <h3><%= blog.title %></h3><hr>
-      <h3>Date: <%= blog.date %></h3><hr>
-      <h3>Time: <%= blog.time %></h3><hr>
-      <h3>Distance: <%= blog.distance %></h3>
+    <div class="col-md-10">
+        <%= image_tag blog.mapimage.url(:medium), class: "mapimage"%>\
+      <%= blog.distance %>
+      <%= blog.time %>
     </div>
   <% end %>
 </div>
+  <% if current_user %>
+    <%= link_to "New Post", new_blog_path, class: "btn btn-primary" %>
+  <% end %>
