@@ -16,3 +16,16 @@
     <p>A Tour Of New Zealand's West Coast Via Man's Most Efficient Machine</p>
   </div>
 </div>
+<div class="container topspace jumbotron">
+  <% @blogs.each do |blog| %>
+    <div class="col-md-3">
+      <%= image_tag blog.mapimage.url(:medium), class: "mapimage"%>
+    </div>
+    <div class="col-md-8 leftspace">
+      <h3><%= blog.title %></h3><hr>
+      <h3>Date: <%= blog.date %></h3><hr>
+      <h3>Time: <%= blog.time %></h3><hr>
+      <h3>Distance: <%= blog.distance %></h3>
+    </div>
+  <% end %>
+</div>

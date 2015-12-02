@@ -29,7 +29,7 @@ a{
   height:35rem;
   overflow: hidden;
   width: 100%;
-  background: url('newZealandCover') no-repeat center;
+  background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('newZealandCover') no-repeat center;
   background-size: cover;
   color: white;
   margin-right: 20%;
@@ -49,4 +49,13 @@ a{
       margin-right: 10%;
         text-shadow: 1px 1px #000;
     }
+}
+.topspace{
+  margin-top: 2%;
+}
+.mapimage{
+  border-radius: 10px;
+}
+.jumbotron {
+  background-color: #F8F8F8;
 }
