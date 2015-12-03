@@ -31,6 +31,13 @@ class DescriptionsController < ApplicationController
     end
   end
 
+  def destroy
+   @blog = Blog.find(params[:blog_id])
+   @description = @blog.descriptions.find(params[:id])
+   @description.destroy
+   redirect_to blog_path(@blog)
+ end
+
 
   private
     def description_params
