@@ -1,14 +1,14 @@
 <div class="container">
-
   <h2>Log in</h2>
 
-   <%= bootstrap_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-    <div class="field form-group">
-      <%= f.email_field :email, label:"Email", autofocus: true %>
+  <%= bootstrap_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="field">
+
+      <%= f.email_field :email, autofocus: true, label:"Email" %>
     </div>
 
-    <div class="field form-group">
-      <%= f.password_field :password, label:"Password", autocomplete: "off" %>
+    <div class="field">
+      <%= f.password_field :password, autocomplete: "off" %>
     </div>
 
     <% if devise_mapping.rememberable? -%>

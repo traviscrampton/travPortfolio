@@ -1,11 +1,10 @@
 <div class="zealandBanner">
   <nav class="navbar navbar-transparent">
     <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
         <a class="navbar-brand glyphicon glyphicon-chevron-left " href="/"></a>
       </div>
-    </div><!-- /.container-fluid -->
+    </div>
   </nav>
     <div class="col-md-6 olzealand">
       <h1>Ol' Zealand</h1>
@@ -21,10 +20,14 @@
   <br><br><br>
     <div class="bottomspace">
     <div class="col-md-12 title">
+      <% if current_user %>
           <h3><%= @blog.title %> <%= link_to "Edit Blog Header", edit_blog_path(@blog), class:"btn btn-default" %>
             <%= link_to "Delete", blog_path(@blog), class:"btn btn-default",
               :data => {:confirm => "Ya sure mate?",
                         :method => "delete"} %></h3>
+      <% else %>
+          <h3> <%= @blog.title %> </h3>
+      <% end %>
           <div class="downandDistance">
             <legend><p>Distance: <%= @blog.distance %> || Time: <%= @blog.time %> || <%= @blog.date %></p></legend>
           </div>
@@ -40,10 +43,14 @@
           <div class="tdspace">
             <% if @blog.descriptions.any? %>
               <% @blog.descriptions.each do |description| %>
-                <p><%= description.content %> <%= link_to "edit content", edit_blog_description_path(@blog, description), class: "btn btn-default" %>
-                  <%= link_to "Delete", blog_description_path(@blog, description), class:"btn btn-default",
-                           :data => {:confirm => "Ya sure mate?",
-                                     :method => "delete"} %> </p>
+                <% if current_user %>
+                  <p><%= description.content %> <%= link_to "edit content", edit_blog_description_path(@blog, description), class: "btn btn-default" %>
+                    <%= link_to "Delete", blog_description_path(@blog, description), class:"btn btn-default",
+                             :data => {:confirm => "Ya sure mate?",
+                                       :method => "delete"} %> </p>
+                <% else %>
+                  <p> <%= description.content %>  </p>
+                <% end %>
                   <div class="pics">
                     <% if description.pic.url(:standard) == "/images/standard/missing.png" %>
                     <% else %>
