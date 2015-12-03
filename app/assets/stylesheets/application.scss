@@ -17,7 +17,7 @@ html {
   margin-left: 5%;
 }
 
-a{
+.navbar a{
   color: white;
 }
 
@@ -33,6 +33,7 @@ a{
   background-size: cover;
   color: white;
   margin-right: 20%;
+  margin-bottom: 5%;
 }
 .olzealand{
   height: 240px;
@@ -53,6 +54,24 @@ a{
 .topspace{
   margin-top: 2%;
 }
+.bottomspace{
+  margin-bottom: 20%;
+}
+.mapspace{
+  margin-top: -4%;
+}
+
+.tdspace{
+  margin-top: -4%;
+  margin-left: 4.1%;
+  margin-right: -1.9%;
+  background-color: #f8f8f8;
+
+  p{
+    font-size: 1.2em;
+  }
+}
+
 .mapimage{
   border-radius: 10px;
   margin-top: -5%;
@@ -68,6 +87,15 @@ a{
 .time p{
   float: right;
 }
+.pics{
+  text-align: center;
+}
+.pic{
+  border-radius: 10px;
+  width: 100%;
+  width: auto;
+}
+
 
 .jumbotron {
   background-color: #F8F8F8;
