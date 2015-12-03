@@ -3,6 +3,12 @@ class BlogsController < ApplicationController
     @blogs = Blog.all
   end
 
+  def show
+    @blog = Blog.find(params[:id])
+    render :show
+  end
+
+
   def new
     @blog = Blog.new
   end
@@ -19,6 +25,6 @@ class BlogsController < ApplicationController
 
   private
   def blog_params
-    params.require(:blog).permit(:title, :date, :distance, :time, :mapimage)
+    params.require(:blog).permit(:title, :date, :distance, :time)
   end
 end

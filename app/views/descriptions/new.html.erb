@@ -1,0 +1,14 @@
+<div class="container">
+  <h2>Add Content To this Blog Post</h2><hr>
+    <%= bootstrap_form_for [@blog, @description] do |f| %>
+      <div class="field form-group">
+        <%= f.text_area :content, label: "Content" %>
+      </div>
+      <div class="field form-group">
+        <%= f.file_field :pic, label: 'Photo'%>
+      </div>
+      <div class="actions form-group">
+        <%= f.submit "Post Content", class:"btn btn-primary" %>
+      </div>
+    <% end %>
+</div>

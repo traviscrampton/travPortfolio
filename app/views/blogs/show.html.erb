@@ -17,24 +17,24 @@
   </div>
 </div>
 <div class="container topspace jumbotron">
-  <% @blogs.each do |blog| %>
+
 
     <div class="col-md-12 title">
-        <h3><%= link_to blog.title, blog_path(blog) %></h3>
-        <legend><p> <%= blog.date %> </p></legend>
+        <h3><%= @blog.title %></h3>
+        <legend><p> <%= @blog.date %> </p></legend>
     </div>
     <div class="col-md-10">
-      <% if blog.mapimage.url(:medium) == "/images/medium/missing.png" %>
+      <% if @blog.mapimage.url(:medium) == "/images/medium/missing.png" %>
       <% else %>
-        <%= image_tag blog.mapimage.url(:medium), class: "mapimage"%>
+        <%= image_tag @blog.mapimage.url(:medium), class: "mapimage"%>
       <% end %>
-      <%= blog.distance %>
-      <%= blog.time %>
+      <%= @blog.distance %>
+      <%= @blog.time %>
     </div>
-  <% end %>
 </div>
 
 <br><br><br>
   <% if current_user %>
     <%= link_to "New Post", new_blog_path, class: "btn btn-primary" %>
+    <%= link_to "New Content Post", new_blog_description_path(@blog), class: "btn btn-primary" %>
   <% end %>
