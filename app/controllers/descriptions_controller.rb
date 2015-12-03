@@ -15,6 +15,22 @@ class DescriptionsController < ApplicationController
       end
     end
 
+  def edit
+    @blog = Blog.find(params[:blog_id])
+    @description = @blog.descriptions.find(params[:id])
+    render :edit
+  end
+
+  def update
+    @blog = Blog.find(params[:blog_id])
+    @description = @blog.descriptions.find(params[:id])
+    if @description.update(description_params)
+      redirect_to blog_path(@blog)
+    else
+      render :edit
+    end
+  end
+
 
   private
     def description_params

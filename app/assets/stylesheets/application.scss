@@ -1,14 +1,17 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
-html {
-  font-family: 'Roboto', sans-serif;
+body {
+font-family: 'Arvo', serif;
 }
 
 .home{
    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),  url('travCoverPhoto') no-repeat center center fixed;
    background-size: cover;
    color: white;
+}
+body{
+  background-color: #f8f8f8;
 }
 
 .hometext {
@@ -80,6 +83,9 @@ html {
   // margin-top: -5%;
 }  p{
   float: right;
+}
+.downandDistance p{
+  text-decoration: underline;
 }
 .date p{
   float: right;

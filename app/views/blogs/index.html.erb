@@ -23,7 +23,9 @@
       <% @blogs.each do |blog| %>
         <div class="col-md-12 title">
           <h3><%= link_to blog.title, blog_path(blog) %></h3>
+          <div class="downandDistance">
             <legend><p>Distance: <%= blog.distance %> || Time: <%= blog.time %> || <%= blog.date %></p></legend>
+          </div>
             <br><br>
         </div>
         <div class="col-md-2 mapspace">
