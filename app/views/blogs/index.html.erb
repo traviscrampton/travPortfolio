@@ -28,9 +28,10 @@
           </div>
             <br><br>
         </div>
-        <div class="col-md-2 mapspace">
+        <div class="col-md-3 mapspace">
           <% if blog.mapimage.url(:medium) == "/images/medium/missing.png" %>
           <% else %>
+          <br>
             <%= image_tag blog.mapimage.url(:medium), class: "mapimage"%>
           <% end %>
         </div>

@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails'
 gem 'pg'
-gem 'sqlite3'
+gem 'sqlite3', '~>1.3.11'
 gem 'uglifier'
 gem 'coffee-rails'
 gem 'jquery-rails'
@@ -25,6 +25,10 @@ group :test, :development do
   gem 'rspec-rails'
   gem 'launchy'
   gem 'pry'
+end
+
+group :production do
+  gem 'rails_12factor'
 end
 
 group :test do

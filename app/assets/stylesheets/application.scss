@@ -57,9 +57,7 @@ body{
         text-shadow: 1px 1px #000;
     }
 }
-.topspace{
-  // margin-top: 2%;
-}
+
 .bottomspace{
   margin-bottom: 20%;
 }
@@ -81,6 +79,7 @@ body{
 .mapimage{
   border-radius: 10px;
   margin-top: -5%;
+  border: solid black 2px;
 }
 .title {
   // margin-top: -5%;
@@ -103,6 +102,7 @@ body{
   border-radius: 10px;
   width: 100%;
   width: auto;
+  border: solid black 2px;
 }
 
 
