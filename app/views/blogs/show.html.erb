@@ -52,12 +52,13 @@
                 <% if dino.class == Post %>
                   <h3> <%= dino.content %> </h3><br>
                 <% elsif dino.class == Pic %>
-                  <% if dino.descript %>
-                    <%= image_tag dino.photo.url(:standard), class: "pic" %>
-                      <div class="subtext col-md-offset-2">
+                  <% if dino.descript.subtext != "" %>
+                    <%= image_tag dino.photo.url(:standard) %>
+                      <div class="well">
                         <%= dino.descript.subtext %>
                       </div>
                    <% else %>
+                     <%= image_tag dino.photo.url(:standard), class: "pic" %> <br>
                   <% end %>
                 <% end %>
 

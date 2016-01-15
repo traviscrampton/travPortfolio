@@ -9,10 +9,14 @@ class PicsController < ApplicationController
   def create
     @blog = Blog.find(params[:blog_id])
     @pic = @blog.pics.new(pic_params)
+    if @pic.descript.subtext == ""
+      binding.pry
+    else
       if @pic.save
         redirect_to blog_path(@blog)
       else
         render :new
+    end
       end
     end
 

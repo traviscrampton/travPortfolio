@@ -104,7 +104,11 @@ background-color: #f8f8f8;
   text-align: center;
 }
 .pic{
-  height: auto;
+  margin-bottom: 1%;
+}
+
+.well{
+  width: 711px;
 }
 
 
@@ -669,6 +673,9 @@ body {
 }
 
 @media only screen and (min-width: 980px) {
+  .well{
+  }
+
 	#front-page {
 		/*background-image: url("../assets/mac.png"); */
 		background: none;

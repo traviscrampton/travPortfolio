@@ -4,6 +4,8 @@ class Pic < ActiveRecord::Base
   validates_attachment_content_type :photo, :content_type => /\Aimage\/.*\Z/
 
   has_one :descript, dependent: :destroy
+
+
   accepts_nested_attributes_for :descript
   belongs_to :blog
 
