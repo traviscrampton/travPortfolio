@@ -3,6 +3,7 @@
 
 body {
 font-family: 'Arvo', serif;
+background-color: #f8f8f8;
 }
 
 .home{
@@ -11,8 +12,11 @@ font-family: 'Arvo', serif;
    height: 2 rem;
    color: white;
 }
-body{
-  background-color: #f8f8f8;
+
+.subtext{
+
+  width: 711px;;
+  color: black;
 }
 
 .hometext {
@@ -100,10 +104,7 @@ body{
   text-align: center;
 }
 .pic{
-  border-radius: 10px;
-  width: 100%;
-  width: auto;
-  border: solid black 2px;
+  height: auto;
 }
 
 

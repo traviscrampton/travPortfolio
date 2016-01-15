@@ -30,29 +30,39 @@
       <% else %>
           <h3> <%= @blog.title %> </h3>
       <% end %>
-          <div class="downandDistance">
-            <legend><p>Distance: <%= @blog.distance %> || Time: <%= @blog.time %> || <%= @blog.date %></p></legend>
-          </div>
             <br><br>
         </div>
-        <div class="col-md-12">
-          <div class="col-md-2 mapspace">
+        <div class="col-md-12 center">
+          <div class="col-md-4">
             <% if @blog.mapimage.url(:medium) == "/images/medium/missing.png" %>
             <% else %>
-              <%= image_tag @blog.mapimage.url(:medium), class: "mapimage"%>
+              <%= image_tag @blog.mapimage.url(:medium)%>
             <% end %>
           </div>
-          <div class="col-md-8" style="float: right;">
+            <div class="col-md-8">
+              <div class="downandDistance">
+                <h3>Distance: <%= @blog.distance %> </h3><hr>
+                <h3>Time: <%= @blog.time %></h3><hr>
+                <h3> <%= @blog.date %></h3><hr>
+              </div>
+            </div>
+        </div>
+          <div class="col-md-12 center">
             <% @dinosaurs.each do |dino| %>
                 <% if dino.class == Post %>
-                  <h1> <%= dino.content %> </h1>
+                  <h3> <%= dino.content %> </h3><br>
                 <% elsif dino.class == Pic %>
-                  <%= image_tag dino.photo.url(:small), class: "pic" %>
-                <% end %>  
+                  <% if dino.descript %>
+                    <%= image_tag dino.photo.url(:standard), class: "pic" %>
+                      <div class="subtext col-md-offset-2">
+                        <%= dino.descript.subtext %>
+                      </div>
+                   <% else %>
+                  <% end %>
+                <% end %>
 
             <% end %>
           </div>
-        </div>
       </div>
 
 </div>

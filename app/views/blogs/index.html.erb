@@ -16,29 +16,44 @@
     <p>A Tour Of New Zealand's West Coast Via Man's Most Efficient Machine</p>
   </div>
 </div>
+<br><br>
+<% @blogs.each do |blog| %>
+<div class="col-md-4 container center">
+  <h3> <%= link_to blog.title, blog_path(blog) %> </h3><hr>
+</div>
+<div class="col-md-12 center">
 
-<div class="container topspace">
-  <br><br><br>
-    <div class="bottomspace">
-      <% @blogs.each do |blog| %>
-        <div class="col-md-12 title">
-            <h3><%= link_to blog.title, blog_path(blog) %></h3>
-          <div class="downandDistance">
-            <legend><p>Distance: <%= blog.distance %> || Time: <%= blog.time %> || <%= blog.date %></p></legend>
-          </div>
-            <br><br>
-        </div>
-        <div class="col-md-3 mapspace">
-          <% if blog.mapimage.url(:medium) == "/images/medium/missing.png" %>
-          <% else %>
-          <br>
-            <%= image_tag blog.mapimage.url(:medium), class: "mapimage"%>
-          <% end %>
-        </div>
-
-      <% end %>
+    <div class="col-md-4">
+        <% if blog.mapimage.url(:medium) == "/images/medium/missing.png" %>
+        <% else %>
+          <%= image_tag blog.mapimage.url(:medium)%>
+        <% end %>
+    </div>
+    <div class="col-md-8">
+      <div class="downandDistance">
+        <h3>Distance: <%= blog.distance %> </h3><hr>
+        <h3>Time: <%= blog.time %></h3><hr>
+        <h3> <%= blog.date %></h3><hr>
+      </div>
     </div>
 </div>
+      <div class="col-md-12 center">
+        <% ((blog.pics + blog.posts).sort_by(&:created_at)).each do |dino| %>
+            <% if dino.class == Post %>
+              <h3> <%= dino.content %> </h3><br>
+            <% elsif dino.class == Pic %>
+              <%= image_tag dino.photo.url(:standard), class: "pic" %><br>
+            <% end %>
+
+        <% end %>
+      </div>
+  </div>
+  <% end %>
+
+  </div>
+</div>
+
+
 
 <br><br><br>
   <% if current_user %>
