@@ -35,23 +35,7 @@
             <%= image_tag blog.mapimage.url(:medium), class: "mapimage"%>
           <% end %>
         </div>
-        <div class="col-md-8">  <br><br>
-          <div class="tdspace">
-            <% if blog.descriptions.any? %>
-              <% blog.descriptions.each do |description| %>
-                <p><%= description.content %></p>
-                  <div class="pics">
-                    <% if description.pic.url(:standard) == "/images/standard/missing.png" %>
-                    <% else %>
-                      <br><br>
-                      <%= image_tag description.pic.url(:standard), class: "pic"%>
-                    <% end %>
-                    <br><br>
-                  </div>
-              <% end %>
-            <% end %>
-          </div>
-        </div>
+
       <% end %>
     </div>
 </div>

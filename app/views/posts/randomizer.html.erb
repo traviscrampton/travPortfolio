@@ -1,0 +1,39 @@
+<!-- <div class="col-md-8">  <br><br>
+  <div class="tdspace">
+    <% if blog.descriptions.any? %>
+      <% blog.descriptions.each do |description| %>
+        <p><%= description.content %></p>
+          <div class="pics">
+            <% if description.pic.url(:standard) == "/images/standard/missing.png" %>
+            <% else %>
+              <br><br>
+              <%= image_tag description.pic.url(:standard), class: "pic"%>
+            <% end %>
+            <br><br>
+          </div>
+      <% end %>
+    <% end %>
+  </div>
+</div> -->
+
+<!--
+<% if @blog.descriptions.any? %>
+  <% @blog.descriptions.each do |description| %>
+    <% if current_user %>
+      <p><%= description.content %> <%= link_to "edit content", edit_blog_description_path(@blog, description), class: "btn btn-default" %>
+        <%= link_to "Delete", blog_description_path(@blog, description), class:"btn btn-default",
+                 :data => {:confirm => "Ya sure mate?",
+                           :method => "delete"} %> </p>
+    <% else %>
+      <p> <%= description.content %>  </p>
+    <% end %>
+      <div class="pics">
+        <% if description.pic.url(:standard) == "/images/standard/missing.png" %>
+        <% else %>
+          <br><br>
+          <%= image_tag description.pic.url(:standard), class: "pic"%>
+        <% end %>
+        <br><br>
+      </div>
+  <% end %>
+<% end %> -->

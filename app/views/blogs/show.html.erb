@@ -20,6 +20,8 @@
   <br><br><br>
     <div class="bottomspace">
     <div class="col-md-12 title">
+      <%= link_to "New Post", new_blog_post_path(@blog), class:"btn btn-warning" %>
+      <%= link_to "New Image", new_blog_pic_path(@blog), class:"btn btn-primary" %>
       <% if current_user %>
           <h3><%= @blog.title %> <%= link_to "Edit Blog Header", edit_blog_path(@blog), class:"btn btn-default" %>
             <%= link_to "Delete", blog_path(@blog), class:"btn btn-default",
@@ -33,35 +35,24 @@
           </div>
             <br><br>
         </div>
-        <div class="col-md-2 mapspace">
-          <% if @blog.mapimage.url(:medium) == "/images/medium/missing.png" %>
-          <% else %>
-            <%= image_tag @blog.mapimage.url(:medium), class: "mapimage"%>
-          <% end %>
-        </div>
-        <div class="col-md-8">  <br><br>
-          <div class="tdspace">
-            <% if @blog.descriptions.any? %>
-              <% @blog.descriptions.each do |description| %>
-                <% if current_user %>
-                  <p><%= description.content %> <%= link_to "edit content", edit_blog_description_path(@blog, description), class: "btn btn-default" %>
-                    <%= link_to "Delete", blog_description_path(@blog, description), class:"btn btn-default",
-                             :data => {:confirm => "Ya sure mate?",
-                                       :method => "delete"} %> </p>
-                <% else %>
-                  <p> <%= description.content %>  </p>
-                <% end %>
-                  <div class="pics">
-                    <% if description.pic.url(:standard) == "/images/standard/missing.png" %>
-                    <% else %>
-                      <br><br>
-                      <%= image_tag description.pic.url(:standard), class: "pic"%>
-                    <% end %>
-                    <br><br>
-                  </div>
-              <% end %>
+        <div class="col-md-12">
+          <div class="col-md-2 mapspace">
+            <% if @blog.mapimage.url(:medium) == "/images/medium/missing.png" %>
+            <% else %>
+              <%= image_tag @blog.mapimage.url(:medium), class: "mapimage"%>
+            <% end %>
+          </div>
+          <div class="col-md-8" style="float: right;">
+            <% @dinosaurs.each do |dino| %>
+                <% if dino.class == Post %>
+                  <h1> <%= dino.content %> </h1>
+                <% elsif dino.class == Pic %>
+                  <%= image_tag dino.photo.url(:small), class: "pic" %>
+                <% end %>  
+
             <% end %>
           </div>
         </div>
       </div>
+
 </div>

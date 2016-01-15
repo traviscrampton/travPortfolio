@@ -5,6 +5,8 @@ class BlogsController < ApplicationController
 
   def show
     @blog = Blog.find(params[:id])
+    allahdablogs = @blog.posts + @blog.pics
+    @dinosaurs = allahdablogs.sort_by(&:created_at)
     render :show
   end
 

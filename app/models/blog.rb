@@ -5,7 +5,7 @@ class Blog < ActiveRecord::Base
 validates_attachment_content_type :mapimage, :content_type => /\Aimage\/.*\Z/
 
   has_many :pics
-  has_many :descriptions
+  has_many :posts
   belongs_to :user
 
 end

@@ -4,7 +4,11 @@ Rails.application.routes.draw do
   root "home#index"
 
   resources :blogs do
-    resources :descriptions
+    resources :posts
+  end
+
+  resources :blogs do
+    resources :pics
   end
 
 end

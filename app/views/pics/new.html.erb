@@ -1,0 +1,21 @@
+<div class="container">
+  <h1>Add An Image, Sure.</h1>
+<br><br><br><br><br><br><br>
+<div class="col-md-8">
+
+  <%= bootstrap_form_for [@blog, @pic] do |f| %>
+    <div class="field form-group">
+      <%= f.file_field :photo, label:"Add A Photo" %>
+    </div>
+
+    <div class="field form-group">
+      <%= f.fields_for :descript do |d| %>
+        <%= d.text_field :subtext, label:'Optional Subtext' %>
+      <% end %>
+    </div>
+    <div class="field form-group">
+      <%= f.submit "Add Photo" %>
+    </div>
+  <% end %>
+</div>
+</div>
