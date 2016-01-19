@@ -1,7 +1,7 @@
 <div class="zealandBanner">
   <nav class="navbar navbar-transparent">
     <div class="container-fluid">
-      <div class="navbar-header">
+      <div class="navbar-header" id="tip">
         <%= link_to "Blog", blogs_path, class:"navbar-brand glyphicon glyphicon-chevron-left"%>
       </div>
     </div>
@@ -9,22 +9,16 @@
     <div class="col-md-6 olzealand">
       <h1>Ol' Zealand</h1>
     </div>
-    <div class="col-md-3">
-    </div>
-    <div class="col-md-3 efficient">
+    <div class="col-md-3 col-md-offset-3 efficient">
       <p>A Tour Of New Zealand's West Coast Via Man's Most Efficient Machine</p>
     </div>
 </div>
 
-<div class="container topspace">
-  <br>
-  <br>
-  <br>
-  <div class="bottomspace">
+<div class="container">
     <div class="col-md-12 title">
-      <%= link_to "New Post", new_blog_post_path(@blog), class:"btn btn-warning" %>
-      <%= link_to "New Image", new_blog_pic_path(@blog), class:"btn btn-primary" %>
       <% if current_user %>
+        <%= link_to "New Post", new_blog_post_path(@blog), class:"btn btn-default" %>
+        <%= link_to "New Image", new_blog_pic_path(@blog), class:"btn btn-default" %>
         <h3>
           <%= @blog.title %>
           <%= link_to "Edit Blog Header", edit_blog_path(@blog), class:"btn btn-default" %>
@@ -38,7 +32,7 @@
       <br>
       <br>
     </div>
-    <div class="col-md-12 container">
+    <div class="col-md-12 container infohead">
       <div class="col-md-4">
         <% if @blog.mapimage.url(:medium) == "/images/medium/missing.png" %>
         <% else %>
@@ -46,26 +40,21 @@
         <% end %>
       </div>
         <div class="col-md-8">
-          <div class="downandDistance">
             <h3>Distance: <%= @blog.distance %> </h3><hr>
             <h3>Time: <%= @blog.time %></h3><hr>
             <h3> <%= @blog.date %></h3><hr>
-          </div>
         </div>
     </div>
-      <div class="col-md-12 center">
+      <div class="col-md-12 postings">
         <% @dinosaurs.each do |dino| %>
             <% if dino.class == Post %>
-            <div class="postext">
               <p> <%= dino.content %> </p>
-            </div>
             <% elsif dino.class == Pic %>
-            <div class="col-md-offset-2">
-
-              <%= image_tag dino.photo.url(:standard), class:"dinoImage center" %> <br>
-            </div>
+              <%= image_tag dino.photo.url(:standard) %> <br>
             <% end %>
         <% end %>
+        <a class="page-scroll" href="#tip">Back To the Top</a>
+        <br><br>
       </div>
-  </div>
+
 </div>
