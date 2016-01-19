@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151219052731) do
+ActiveRecord::Schema.define(version: 20160119190944) do
 
   create_table "blogs", force: :cascade do |t|
     t.string   "title"
@@ -23,13 +23,6 @@ ActiveRecord::Schema.define(version: 20151219052731) do
     t.integer  "mapimage_file_size"
     t.datetime "mapimage_updated_at"
     t.integer  "user_id"
-  end
-
-  create_table "descripts", force: :cascade do |t|
-    t.text     "subtext"
-    t.integer  "pic_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
   create_table "pics", force: :cascade do |t|

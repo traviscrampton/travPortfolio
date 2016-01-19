@@ -51,11 +51,11 @@ body {
 .home{
    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),  url('travCoverPhoto') no-repeat center center fixed;
    background-size: cover;
-   height: 550px;
+   height: 50rem;
    color: white;
    h1 {
-     font-weight: bold;
-     text-shadow: 1px black;
+
+     text-shadow: 1px 1px 1px black;
    }
 }
 
@@ -83,6 +83,7 @@ body {
 
 .navbar a{
   color: white;
+
 }
 
 .goRight h5{
@@ -337,9 +338,9 @@ body {
 						li {
 							margin: 0 .4rem 0 0;
 							border-bottom: 1px solid #BDBDBD;
-					    width: 4rem;
+					    width: 6rem;
 					    float: left;
-					    padding: .1rem 0;
+					    padding: .2rem 0;
 					    min-height: 2rem;
 							p {
 								font-size: 1rem;
