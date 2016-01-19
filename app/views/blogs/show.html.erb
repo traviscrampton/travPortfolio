@@ -38,7 +38,7 @@
       <br>
       <br>
     </div>
-    <div class="col-md-12 center">
+    <div class="col-md-12 container">
       <div class="col-md-4">
         <% if @blog.mapimage.url(:medium) == "/images/medium/missing.png" %>
         <% else %>
@@ -56,9 +56,14 @@
       <div class="col-md-12 center">
         <% @dinosaurs.each do |dino| %>
             <% if dino.class == Post %>
-              <h3> <%= dino.content %> </h3><br>
+            <div class="postext">
+              <p> <%= dino.content %> </p>
+            </div>
             <% elsif dino.class == Pic %>
-              <%= image_tag dino.photo.url(:standard), class:"img-responsive" %> <br>
+            <div class="col-md-offset-2">
+
+              <%= image_tag dino.photo.url(:standard), class:"dinoImage center" %> <br>
+            </div>
             <% end %>
         <% end %>
       </div>

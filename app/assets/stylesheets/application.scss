@@ -1,13 +1,51 @@
+
 /*
- *= require font-awesome
- */
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+* or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any styles
+* defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+* file per style scope.
+*
+*= require_tree .
+*= require_self
+*= require font-awesome
+*/
+
+$white: #FFFFFF;
+$highlight: #c6e2d9;
+$dark: #454243;
+$red: #DA5B5B;
+$blue: #8BABBB;
+$gold: #FAB117;
+$light: #EDEFF5;
+$light-grey: #EFF0F0;
+$medium-grey: #bfc0c0;
+
+
 
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
+
 body {
-font-family: 'Arvo', serif;
-background-color: #f8f8f8;
+  font-family: 'Quicksand', sans-serif;
+  background-color: #f8f8f8;
+}
+.dinoImage{
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+.postext{
+
+  padding: 1%;
+  margin-top: 1%;
+  text-align: center;
 }
 
 .home{
@@ -15,6 +53,14 @@ background-color: #f8f8f8;
    background-size: cover;
    height: 550px;
    color: white;
+   h1 {
+     font-weight: bold;
+     text-shadow: 1px black;
+   }
+}
+
+.centered{
+  text-align: centered;
 }
 
 .subtext{
@@ -36,7 +82,7 @@ background-color: #f8f8f8;
 }
 
 .navbar a{
-  color: grey;
+  color: white;
 }
 
 .goRight h5{
@@ -123,33 +169,6 @@ background-color: #f8f8f8;
 
 
 
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
-$white: #FFFFFF;
-$highlight: #c6e2d9;
-$dark: #454243;
-$red: #DA5B5B;
-$blue: #8BABBB;
-$gold: #FAB117;
-$light: #EDEFF5;
-$light-grey: #EFF0F0;
-$medium-grey: #bfc0c0;
-
-
-
 * {
 	box-sizing: border-box;
 }
@@ -162,11 +181,6 @@ $medium-grey: #bfc0c0;
   clear: both;
 }
 
-
-
-body {
-	font-family: 'Lato', sans-serif;
-}
 
 
 
