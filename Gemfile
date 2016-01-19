@@ -12,7 +12,7 @@ gem 'sass-rails', '>= 3.2'
 gem 'devise'
 gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
 gem 'bootstrap_form'
-gem 'masonry-rails'
+gem "font-awesome-rails"
 
 group :development do
   gem 'byebug'

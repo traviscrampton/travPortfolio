@@ -1,3 +1,7 @@
+/*
+ *= require font-awesome
+ */
+
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
@@ -9,12 +13,11 @@ background-color: #f8f8f8;
 .home{
    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),  url('travCoverPhoto') no-repeat center center fixed;
    background-size: cover;
-   height: 2 rem;
+   height: 550px;
    color: white;
 }
 
 .subtext{
-
   width: 711px;;
   color: black;
 }
@@ -24,12 +27,16 @@ background-color: #f8f8f8;
     text-shadow: 1.3px 1.3px #000;
   }
   text-align: center;
-  margin-top: 30%;
   margin-left: 5%;
 }
 
-.navbar a{
+#logo {
   color: white;
+  font-weight: 500;
+}
+
+.navbar a{
+  color: grey;
 }
 
 .goRight h5{
@@ -161,71 +168,7 @@ body {
 	font-family: 'Lato', sans-serif;
 }
 
-.text_muted {
-	color: lighten($dark, 30%);
-	font-weight: 300;
-	font-size: 1.2rem;
-}
 
-.wrapper_wide {
-	width: 90%;
-	margin: 0 auto;
-}
-
-.wrapper_medium {
-	width: 80%;
-	margin: 0 auto;
-}
-
-.wrapper {
-	width: 75%;
-	max-width: 1400px;
-	margin: 0 auto;
-}
-
-.wrapper_skinny {
-	width: 50%;
-	margin: 0 auto;
-}
-
-.wrapper_skinny_left {
-	width: 50%;
-	float: left;
-	text-align: left;
-}
-
-.wrapper_skinny_right {
-	width: 50%;
-	float: right;
-	text-align: right;
-}
-
-.center {
-	text-align: center;
-}
-
-.cf:before, .cf:after {
-	content: " ";
-	display: table;
-}
-
-.cf:after {
-	clear: both;
-}
-
-#notice_wrapper {
-	width: 100%;
-	position: absolute;
-	background: rgba(208,103,82, 0.8);
-	z-index: 999;
-	p {
-		color: $white;
-		text-align: center;
-		font-weight: 700;
-		font-size: 1.25rem;
-		padding: 1.5rem 0;
-	}
-}
 
 .hr_short {
 	width: 60%;
@@ -238,79 +181,6 @@ body {
   height: 1px;
   border: 0;
   border-top: 1px solid $light-grey;
-}
-
-.button {
-  text-transform: uppercase;
-  letter-spacing: 1.3px;
-  text-decoration: none;
-  line-height: 27px;
-  border-radius: 1px;
-  padding: 1rem 1.7rem;
-  background: transparent;
-  color: $red;
-  border: 1px solid $red;
-  &:hover {
-  	transition: .2s ease-in-out;
-  	background: $red;
-  	color: $dark;
-  	border: 1px solid transparent;
-  }
-}
-
-.button_blue {
-  text-transform: uppercase;
-  letter-spacing: 1.3px;
-  text-decoration: none;
-  line-height: 27px;
-  border-radius: 1px;
-  padding: 1rem 1.7rem;
-  background: transparent;
-  color: $blue;
-  border: 1px solid $blue;
-  &:hover {
-  	transition: .2s ease-in-out;
-  	background: $blue;
-  	color: $dark;
-  	border: 1px solid transparent;
-  }
-}
-
-#main_header {
-	color: $dark;
-	background: rgba(250, 250, 250, 0.9);
-	position: fixed;
-	width: 100%;
-	display: block;
-	border-bottom: 1px solid #DEDFE6;
-	z-index: 999;
-	.logo {
-		float: left;
-		width: 65px;
-		padding: 1rem;
-	}
-	nav {
-		float: right;
-		ul {
-			list-style: none;
-			padding: 1rem 1rem;
-			margin: 0 0 0 -.3rem;
-			a {
-					color: $dark;
-					text-decoration: none;
-					transition: color .2s ease-in-out;
-					&:hover {
-						color: lighten($dark, 20%);
-					}
-				}
-			li {
-				display: inline-block;
-				padding: .5rem 0;
-				margin-left: .4rem;
-
-			}
-		}
-	}
 }
 
 .title { font-size: 1.75rem; margin: 0 0 .75rem 0; }
@@ -468,144 +338,16 @@ body {
 	}
 }
 
-#gallery {
-	background-image: linear-gradient($dark, darken($dark, 33%));
-	display: inline-block;
-	clear: both;
-	h2 {
-		color: $white;
-		text-align: center;
-		font-size: 2.5rem;
-		font-weight: 300;
-		padding: 2rem 0;
-	}
-	.gallery_info {
-		background-color: lighten($dark, 3%);
-		padding: 0 0 2rem 0;
-		h3 {
-			color: lighten($dark, 65%);
-			font-size: 1.5em;
-			font-weight: 400;
-		}
-		.sub_title {
-			color: lighten($dark, 35%);
-			font-weight: 300;
-			font-size: 1.5em;
-		}
-	}
-	#gallery_outer {
-		background-color: lighten($dark, 3%);
-		#gallery_box {
-			padding: 2rem 7.5%;
-			.gallery_item {
-				padding: .5rem;
-				margin: 0 auto;
-				float: center;
-				img {
-					width: 100%;
-					max-width: 100%;
-					&:hover {
-						transition: .2s ease-in-out;
-						opacity: .8;
-					}
-				}
-			}
-			.gallery_item_logo {
-				padding: .5rem 0;
-				margin: 0 auto;
-				text-align: center;
-				img {
-					width: 25%;
-					max-width: 100%;
-					&:hover {
-						transition: .2s ease-in-out;
-						opacity: .8;
-					}
-				}
-			}
-		}
-	}
-}
-#contact {
-	h2 {
-		color: $white;
-		padding: 4rem 0 0 0;
-		font-size: 2.5rem;
-		font-weight: 300;
-	}
-	.inner {
-		min-height: 300px;
-		background-image: linear-gradient($dark, darken($dark, 5%));
-		form {
-			margin: 0 auto;
-			padding: 3rem 0 5rem 0;
-			text-align: center;
-			input[type="email"], input[type="text"]{
-				width: 100%;
-				height: 2rem;
-				padding: 1.4rem 1rem;
-				background: transparent;
-				margin-bottom: 1rem;
-				border-bottom: 2px solid $medium-grey;
-				border-top: none;
-				border-right: none;
-				border-radius: 5px;
-				color: $medium-grey;
-			}
-				/* border-radius: 0;
-				color: $medium-grey;
-				border-bottom: 1px solid $medium-grey;
-				margin-top: .5rem;
-				font-color: $medium-grey;
-				box-sizing: border-box;
-			}*/
-			a:focus,
-			input:focus,
-			select:focus,
-			textarea:focus {
-				outline: none;
-			  border-bottom:  2px solid darken($blue, 5%);
-			}
-			button {
-				padding: .8rem 1.4rem;
-			}
-			.button_blue:focus {
-				outline: none;
-				background: $blue;
-				border: 2px solid $blue;
-				color: white;
-			}
-		}
-	}
-}
-
-.has-error .form-control {
-  border-color: #a94442;
-  border-bottom:  none;
-  /* -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  box-shadow: inset 0 11px 11px rgba(0, 0, 0, 0.075); */
-}
-.has-error .form-control:focus {
-  border-bottom: none;
-  /* -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 5px #ce8483;
-  box-shadow: inset 0 11px 11px rgba(0, 0, 0, 0.075); */
-}
-
-.result {
-	color: $white;
-}
-
 #footer {
 	width: 100%;
 	margin: 0;
 	padding: 1.3rem;
-	background-color: $red;
+	background-color: $gold;
 	.copyright {
 		float: left;
 		margin: 0;
-		font-size: .6rem;
 		font-weight: 300;
-		color: $white;
+		color: $dark;
 		padding-top: 0.6rem;
 	}
 	nav {
@@ -626,21 +368,6 @@ body {
 	}
 }
 
-@media only screen and (min-width: 450px) {
-	#contact {
-		.inner {
-			form {
-				padding: 2rem 0;
-				input[type="email"], input[type="text"]{
-					height: 1.5	rem;
-					padding: 2rem 2rem;
-					background: transparent;
-					margin-bottom: 1rem;
-				}
-			}
-		}
-	}
-}
 
 @media only screen and (min-width: 650px) {
 	#gallery {
@@ -715,9 +442,6 @@ body {
 			}
 		}
   }
-	#contact .wrapper {
-		width: 50%;
-	}
 }
 
 @media only screen and (max-width: 1100px) {

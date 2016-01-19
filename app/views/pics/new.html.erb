@@ -9,11 +9,6 @@
     </div>
 
     <div class="field form-group">
-      <%= f.fields_for :descript do |d| %>
-        <%= d.text_field :subtext, label:'Optional Subtext' %>
-      <% end %>
-    </div>
-    <div class="field form-group">
       <%= f.submit "Add Photo" %>
     </div>
   <% end %>

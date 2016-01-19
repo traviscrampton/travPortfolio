@@ -3,20 +3,15 @@ class PicsController < ApplicationController
   def new
     @blog = Blog.find(params[:blog_id])
     @pic = @blog.pics.new
-    @pic.build_descript
   end
 
   def create
     @blog = Blog.find(params[:blog_id])
     @pic = @blog.pics.new(pic_params)
-    if @pic.descript.subtext == ""
-      binding.pry
-    else
       if @pic.save
         redirect_to blog_path(@blog)
       else
         render :new
-    end
       end
     end
 
@@ -46,6 +41,6 @@ class PicsController < ApplicationController
 
   private
     def pic_params
-      params.require(:pic).permit(:photo, descript_attributes: [:subtext])
+      params.require(:pic).permit(:photo)
     end
   end
