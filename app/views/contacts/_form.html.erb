@@ -1,6 +1,17 @@
-<%= bootstrap_form_for @contact, remote:true do |c| %>
-  <%= c.text_field :name, label:"Name" %>
-  <%= c.text_field :email, label:"email" %>
-  <%= c.text_area :message, label:"Message" %>
-  <%= c.submit class:"btn button-black" %>
-<% end %>
+<div class="contactForm">
+
+  <h1>Contact</h1>
+
+
+  <%= bootstrap_form_for @contact, remote:true do |c| %>
+
+    <%= c.text_field :name, label:"Name" %>
+
+    <%= c.text_field :email, label:"email" %>
+
+    <%= c.text_area :message, label:"Message" %>
+    <div class="buttonz">
+      <%= c.submit "Send"  %>
+    </div>
+  <% end %>
+</div>

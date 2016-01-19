@@ -48,6 +48,74 @@ body {
   text-align: center;
 }
 
+ul.nav.navbar-nav.navbar-right a:hover{
+  background-color: transparent;
+  color: $gold;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+}
+
+#contact{
+  background-color: $light-grey;
+  padding: 2%;
+}
+
+.contactForm {
+  h1{
+    color: $dark;
+    text-align: center;
+    margin-top: 0;
+  }
+  form{
+    width: 40%;
+    margin-right: auto;
+    margin-left: auto;
+    label{
+      color: $dark;
+    }
+    input, textarea{
+      border-radius: 0px;
+      border-color: $dark;
+      background-color: #f8f8f8;
+    }
+    input:focus, textarea:focus{
+      border-color: $gold;
+    }
+    textarea{
+      min-height: 100px;
+    }
+    .btn.btn-default{
+      width: 250px;
+      height: auto;
+      border-color: $dark;
+      font-size: 2rem;
+      font-weight: bold;
+      color: $dark;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    .btn.btn-default:hover{
+      background-color: $highlight;
+      border-color: $gold;
+      -o-transition:1s;
+      -ms-transition:1s;
+      -moz-transition:1s;
+      -webkit-transition:1s;
+    }
+
+  }
+  .buttonz{
+    text-align: center;
+  }
+}
+
+.contactConfirm{
+  text-align: center;
+  color: white;
+}
+
 .home{
    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),  url('travCoverPhoto') no-repeat center center fixed;
    background-size: cover;
@@ -360,7 +428,7 @@ body {
 	background-color: $gold;
 	.copyright {
 		float: left;
-		margin: 0;
+		margin-top: .5%;
 		font-weight: 300;
 		color: $dark;
 		padding-top: 0.6rem;
@@ -370,6 +438,7 @@ body {
 		display: inline-block;
 		.links {
 			i {
+        font-size: 2rem;
 				color: $dark;
 				margin-left: .2rem;
 				padding: 1rem .5rem;
