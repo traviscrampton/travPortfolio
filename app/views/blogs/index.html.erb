@@ -10,44 +10,40 @@
   <div class="col-md-6 olzealand">
     <h1>Ol' Zealand</h1>
   </div>
-  <div class="col-md-3">
-  </div>
-  <div class="col-md-3 efficient">
+  <div class="col-md-3 col-md-offset-3 efficient">
     <p>A Tour Of New Zealand's West Coast Via Man's Most Efficient Machine</p>
   </div>
 </div>
-<br><br>
-<% @blogs.each do |blog| %>
-<div class="col-md-4 container center">
-  <h3> <%= link_to blog.title, blog_path(blog) %> </h3><hr>
-</div>
-<div class="col-md-12 center">
 
-    <div class="col-md-4">
-        <% if blog.mapimage.url(:medium) == "/images/medium/missing.png" %>
-        <% else %>
-          <%= image_tag blog.mapimage.url(:medium)%>
-        <% end %>
-    </div>
-    <div class="col-md-8">
-      <div class="downandDistance">
-        <h3>Distance: <%= blog.distance %> </h3><hr>
-        <h3>Time: <%= blog.time %></h3><hr>
-        <h3> <%= blog.date %></h3><hr>
+  <% @blogs.each do |blog| %>
+    <div class="infohead">
+      <div class="col-md-12 container">
+        <h2> <%= link_to blog.title, blog_path(blog) %> </h2><hr>
       </div>
-    </div>
-</div>
       <div class="col-md-12 center">
-        <% ((blog.pics + blog.posts).sort_by(&:created_at)).each do |dino| %>
-            <% if dino.class == Post %>
-              <h3> <%= dino.content %> </h3><br>
-            <% elsif dino.class == Pic %>
-              <%= image_tag dino.photo.url(:standard), class: "pic" %><br>
+        <div class="col-md-4">
+            <% if blog.mapimage.url(:medium) == "/images/medium/missing.png" %>
+            <% else %>
+              <%= image_tag blog.mapimage.url(:medium)%>
             <% end %>
-
-        <% end %>
+        </div>
+        <div class="col-md-8">
+            <h3>Distance: <%= blog.distance %> </h3><hr>
+            <h3>Time: <%= blog.time %></h3><hr>
+            <h3> <%= blog.date %></h3><hr>
+        </div>
       </div>
-  </div>
+    </div>
+    <div class="col-md-12 postings">
+      <% ((blog.pics + blog.posts).sort_by(&:created_at)).each do |dino| %>
+          <% if dino.class == Post %>
+            <p> <%= dino.content %> </p><br>
+          <% elsif dino.class == Pic %>
+            <%= image_tag dino.photo.url(:standard) %><br>
+          <% end %>
+      <% end %>
+    </div>
+    </div>
   <% end %>
 
   </div>
@@ -57,5 +53,5 @@
 
 <br><br><br>
   <% if current_user %>
-    <%= link_to "New Post", new_blog_path, class: "btn btn-primary" %>
+    <%= link_to "New Post", new_blog_path, class: "btn btn-default" %>
   <% end %>
