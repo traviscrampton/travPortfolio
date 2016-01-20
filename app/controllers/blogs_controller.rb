@@ -47,6 +47,6 @@ end
 
   private
   def blog_params
-    params.require(:blog).permit(:title, :date, :distance, :time, :mapimage)
+    params.require(:blog).permit(:title, :date, :distance, :time, :mapimage, :totaldistance)
   end
 end

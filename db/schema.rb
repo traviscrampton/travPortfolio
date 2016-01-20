@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160119191418) do
+ActiveRecord::Schema.define(version: 20160120002341) do
 
   create_table "blogs", force: :cascade do |t|
     t.string   "title"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20160119191418) do
     t.integer  "mapimage_file_size"
     t.datetime "mapimage_updated_at"
     t.integer  "user_id"
+    t.string   "totaldistance"
   end
 
   create_table "contacts", force: :cascade do |t|

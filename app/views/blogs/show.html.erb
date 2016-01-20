@@ -41,17 +41,26 @@
         <div class="col-md-8">
             <h3>Distance: <%= @blog.distance %> </h3><hr>
             <h3>Time: <%= @blog.time %></h3><hr>
+            <h3>Total Distance: <%= @blog.totaldistance %></h3><hr>
             <h3> <%= @blog.date %></h3><hr>
         </div>
     </div>
   </div>
 
-      <div class="col-md-12 postings">
+      <div class="postings">
         <% @dinosaurs.each do |dino| %>
             <% if dino.class == Post %>
-              <p> <%= dino.content %> </p>
+            <div class="col-md-12 duff">
+              <br>
+              <p> <%= dino.content %>
+                 <% if current_user %>
+                    <%= link_to "Check it", blog_post_path(@blog, dino), class:"btn btn-default" %>
+                  <% end %> </p><br><br>
+            </div>
             <% elsif dino.class == Pic %>
+            <div class="col-md-12">
               <%= image_tag dino.photo.url(:standard) %> <br>
+            </div>
             <% end %>
         <% end %>
         <a class="page-scroll" href="#tip">Back To the Top</a>

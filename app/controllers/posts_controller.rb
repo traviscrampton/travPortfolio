@@ -15,6 +15,11 @@ class PostsController < ApplicationController
       end
     end
 
+    def show
+      @blog = Blog.find(params[:blog_id])
+      @post = @blog.posts.find(params[:id])
+    end
+
   def edit
     @blog = Blog.find(params[:blog_id])
     @post = @blog.posts.find(params[:id])
