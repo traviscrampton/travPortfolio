@@ -39,7 +39,7 @@ body {
 
 
 .postings{
-  margin-bottom: 10%;
+  margin-top: 1% 0px;
   p{
     padding: 2px 20% 2px 20%;
     margin-top: 1%;
@@ -48,7 +48,7 @@ body {
   }
   img{
     display: block;
-    margin: 0 auto;
+    margin: 1% auto;
     border: 3px solid white;
     border-radius: .5%;
 
@@ -73,7 +73,6 @@ ul.nav.navbar-nav.navbar-right a:hover{
 }
 
 .infohead{
-  margin-bottom: 40%;
   text-align: center;
   img{
     display: block;
@@ -444,6 +443,9 @@ ul.nav.navbar-nav.navbar-right a:hover{
 					    min-height: 2rem;
 							p {
 								font-size: 1rem;
+                text-align: center;
+                float: none;
+                margin: 30% 0px 0px 0px;
 							}
 						}
 					}
@@ -542,6 +544,7 @@ ul.nav.navbar-nav.navbar-right a:hover{
 				img {
 					width: 50%;
 					float: left;
+          margin-top: 5.7%;
 				}
 				.project_overview {
 					padding: 0 5rem;
