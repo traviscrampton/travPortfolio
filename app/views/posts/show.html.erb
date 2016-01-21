@@ -1,4 +1,7 @@
 <div class="container">
   <h1> <%= @post.content %> <h1>
     <%= link_to "Edit", edit_blog_post_path(@blog, @post) %>
+    <%= link_to "Delete", blog_post_path(@blog, @post),
+                      :data => {:confirm => "Ya sure mate?",
+                      :method => "delete"} %>
 </div>

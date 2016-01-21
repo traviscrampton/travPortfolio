@@ -72,6 +72,27 @@ ul.nav.navbar-nav.navbar-right a:hover{
   padding: 2%;
 }
 
+.pagi{
+  text-align: center;
+  a, em.current{
+    font-size: 2rem;
+  }
+  em.current{
+    font-weight: bold;
+    color: $gold;
+  }
+
+  a:hover{
+    background-color: transparent;
+    color: $gold;
+    text-decoration: none;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+  }
+}
+
 .infohead{
   text-align: center;
   img{
@@ -148,7 +169,7 @@ ul.nav.navbar-nav.navbar-right a:hover{
 }
 
 .home{
-   background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),  url('travCoverPhoto') no-repeat center center fixed;
+   background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),  url('travCoverPhoto') no-repeat center center fixed;
    background-size: cover;
    height: 50rem;
    color: white;
@@ -171,6 +192,8 @@ ul.nav.navbar-nav.navbar-right a:hover{
 .hometext {
   h1{
     text-shadow: 1.5px 1.5px #000;
+    font-size: 4rem;
+    float: left;
   }
   text-align: center;
   margin-left: 5%;

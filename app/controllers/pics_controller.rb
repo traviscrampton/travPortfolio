@@ -21,6 +21,11 @@ class PicsController < ApplicationController
     render :edit
   end
 
+  def show
+    @blog = Blog.find(params[:blog_id])
+    @pic = @blog.pics.find(params[:id])
+  end
+
   def update
     @blog = Blog.find(params[:blog_id])
     @pic = @blog.pics.find(params[:id])

@@ -58,7 +58,10 @@
             </div>
             <% elsif dino.class == Pic %>
             <div class="col-md-12">
-              <%= image_tag dino.photo.url(:standard) %> 
+              <%= image_tag dino.photo.url(:standard) %>
+                <% if current_user %>
+                  <%= link_to "Review", blog_pic_path(@blog, dino), class:"btn btn-default" %>
+                <% end %>
             </div>
             <% end %>
         <% end %>

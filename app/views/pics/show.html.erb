@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="postings">
+    <%= image_tag @pic.photo.url(:standard) %>
+  </div>
+  <div style="text-align: center;">
+    <h2><%= link_to "Edit", edit_blog_pic_path(@blog, @pic) %></h2>
+    <h2><%= link_to "Delete", blog_pic_path(@blog, @pic),
+    :data => {:confirm => "Ya sure mate?",
+      :method => "delete"} %></h2>
+  </div>
+</div>

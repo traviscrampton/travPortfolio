@@ -15,39 +15,48 @@
   </div>
 </div>
 
+
+
+
+
   <% @blogs.each do |blog| %>
-    <div class="infohead">
-      <div class="col-md-12 container">
-        <h2> <%= link_to blog.title, blog_path(blog) %> </h2><hr>
+    <div id="blogs">
+      <div class="infohead">
+        <div class="col-md-12 container">
+          <h2> <%= link_to blog.title, blog_path(blog) %> </h2><hr>
+        </div>
+        <div class="col-md-12 center">
+          <div class="col-md-4">
+              <% if blog.mapimage.url(:medium) == "/images/medium/missing.png" %>
+              <% else %>
+                <%= image_tag blog.mapimage.url(:medium)%>
+              <% end %>
+          </div>
+          <div class="col-md-8">
+              <h3>Distance: <%= blog.distance %> </h3><hr>
+              <h3>Time: <%= blog.time %></h3><hr>
+              <h3>Total Distance: <%= blog.totaldistance %></h3><hr>
+              <h3> <%= blog.date %></h3><hr>
+          </div>
+        </div>
       </div>
-      <div class="col-md-12 center">
-        <div class="col-md-4">
-            <% if blog.mapimage.url(:medium) == "/images/medium/missing.png" %>
-            <% else %>
-              <%= image_tag blog.mapimage.url(:medium)%>
+      <div class="col-md-12 postings">
+        <% ((blog.pics + blog.posts).sort_by(&:created_at)).each do |dino| %>
+            <% if dino.class == Post %>
+              <p> <%= dino.content %> </p><br>
+            <% elsif dino.class == Pic %>
+              <%= image_tag dino.photo.url(:standard) %><br>
             <% end %>
-        </div>
-        <div class="col-md-8">
-            <h3>Distance: <%= blog.distance %> </h3><hr>
-            <h3>Time: <%= blog.time %></h3><hr>
-            <h3>Total Distance: <%= blog.totaldistance %></h3><hr>
-            <h3> <%= blog.date %></h3><hr>
-        </div>
+        <% end %>
       </div>
-    </div>
-    <div class="col-md-12 postings">
-      <% ((blog.pics + blog.posts).sort_by(&:created_at)).each do |dino| %>
-          <% if dino.class == Post %>
-            <p> <%= dino.content %> </p><br>
-          <% elsif dino.class == Pic %>
-            <%= image_tag dino.photo.url(:standard) %><br>
-          <% end %>
-      <% end %>
-    </div>
+      </div>
     </div>
   <% end %>
 
   </div>
+</div>
+<div class="pagi">
+  <%= will_paginate @blogs %>
 </div>
 
 

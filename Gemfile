@@ -13,6 +13,7 @@ gem 'devise'
 gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
 gem 'bootstrap_form'
 gem "font-awesome-rails"
+gem 'will_paginate', '~> 3.0.6'
 
 group :development do
   gem 'byebug'
