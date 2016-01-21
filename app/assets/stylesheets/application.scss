@@ -49,7 +49,6 @@ body {
   img{
     display: block;
     margin: 1% auto;
-    border: 3px solid white;
     border-radius: .5%;
 
   }
@@ -80,11 +79,13 @@ ul.nav.navbar-nav.navbar-right a:hover{
   em.current{
     font-weight: bold;
     color: $gold;
+    font-size: 2.5rem;
   }
 
   a:hover{
     background-color: transparent;
     color: $gold;
+    font-size: 2.5rem;
     text-decoration: none;
     -o-transition:.5s;
     -ms-transition:.5s;
@@ -98,13 +99,14 @@ ul.nav.navbar-nav.navbar-right a:hover{
   img{
     display: block;
     margin: 0 auto;
-    border: 1px solid white;
+    border: 1px solid $medium-grey;
     height: 300px;
     width: 225px;
   }
 
   a:hover{
     color: $gold;
+    font-size: 3.05rem;
     text-decoration: none;
     -o-transition:.3s;
     -ms-transition:.3s;
@@ -259,38 +261,17 @@ ul.nav.navbar-nav.navbar-right a:hover{
   }
 }
 
-.mapimage{
-  border-radius: 10px;
-  margin-top: -5%;
-  border: solid black 2px;
-}
+
 .title {
   // margin-top: -5%;
 }  p{
   float: right;
 }
 
-.date p{
-  float: right;
-}
-.time p{
-  float: right;
-}
-.pics{
-  text-align: center;
-}
 .pic{
   margin-bottom: 1%;
   margin-top: 1%;
 }
-
-.well{
-  width: 711px;
-}
-
-
-
-
 
 * {
 	box-sizing: border-box;
