@@ -10,7 +10,6 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'sass-rails', '>= 3.2'
-gem 'sqlite3'
 gem 'devise'
 gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
 gem 'bootstrap_form'
