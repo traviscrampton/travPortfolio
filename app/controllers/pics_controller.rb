@@ -1,5 +1,6 @@
 class PicsController < ApplicationController
-
+  before_action :authenticate_user!, except: [:index, :show]
+  
   def new
     @blog = Blog.find(params[:blog_id])
     @pic = @blog.pics.new

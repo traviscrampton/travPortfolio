@@ -1,4 +1,6 @@
 class BlogsController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
+
   def index
     @blogs = Blog.all.page(params[:page]).per_page(3)
   end
