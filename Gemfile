@@ -1,8 +1,9 @@
 source 'https://rubygems.org'
 
+ruby "2.2.3"
+
 gem 'rails'
 gem 'pg'
-gem 'sqlite3', '~>1.3.11'
 gem 'uglifier'
 gem 'coffee-rails'
 gem 'jquery-rails'
