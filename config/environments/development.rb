@@ -35,6 +35,8 @@ Rails.application.configure do
   # Checks for improperly declared sprockets dependencies.
   # Raises helpful error messages.
   config.assets.raise_runtime_errors = true
+  config.action_mailer.default_url_options = { :host => 'https://evening-harbor-24338.herokuapp.com' }
+
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
