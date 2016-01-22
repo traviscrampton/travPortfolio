@@ -86,8 +86,8 @@ Rails.application.configure do
       address:              'smtp.gmail.com',
       port:                 587,
       domain:               'https://evening-harbor-24338.herokuapp.com/',
-      user_name:            'travisappdomain@gmail.com ',
-      password:             'shlank08',
+      user_name:            'travisappdomain@gmail.com',
+      password:             'entersandman',
       authentication:       'plain',
       enable_starttls_auto: true,
        openssl_verify_mode:   'none'
