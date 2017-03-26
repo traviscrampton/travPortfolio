@@ -20,6 +20,7 @@ gem 'aws-sdk', '< 2.0'
 group :development do
   gem 'byebug'
   gem 'web-console'
+	gem 'sqlite3'
   gem 'spring'
   gem 'quiet_assets'
 end
